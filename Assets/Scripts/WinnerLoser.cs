@@ -8,9 +8,9 @@ public class WinnerLoser : MonoBehaviour
     [SerializeField] GameObject selfprefab;
     [SerializeField] GameObject scissorprefab;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter()
     {
-        if(collision.collider.tag == "rock")
+        if (other.gameObject.tag == "rock") // if(collision.otherCollider.tag == "rock")
         {
             //other = collision.gameObject;
             //Instantiate(selfprefab, other.GetComponent<Transform>().localPosition, Quaternion.identity);
@@ -18,7 +18,7 @@ public class WinnerLoser : MonoBehaviour
             Debug.Log("rock collison");
         }
 
-        if (collision.collider.tag == "scissors")
+        if (other.gameObject.tag == "scissor") //if (collision.otherCollider.tag == "scissors")
         {
             //other = collision.gameObject;
             //Instantiate(scissorprefab, transform.localPosition, Quaternion.identity);
