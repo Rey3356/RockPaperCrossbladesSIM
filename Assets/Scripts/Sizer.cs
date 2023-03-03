@@ -21,8 +21,8 @@ public class Sizer : MonoBehaviour
         rocks = GameObject.FindGameObjectsWithTag("rock");
         papers = GameObject.FindGameObjectsWithTag("paper");
         scissors = GameObject.FindGameObjectsWithTag("scissors");
-        size.localScale = new Vector3(0.5f + sizeslide.normalizedValue, 0.5f + sizeslide.normalizedValue, 0.5f + sizeslide.normalizedValue);
-        if (size.localScale.x <= 1.5f && size.localScale.x >= 0.5f)
+        size.localScale = new Vector3(0.2f + sizeslide.normalizedValue, 0.2f + sizeslide.normalizedValue, 0.2f + sizeslide.normalizedValue);
+        if (size.localScale.x <= 1.2f && size.localScale.x >= 0.2f)
         {
             int lr = rocks.Length;
             for (int i = 0; i < lr; i++)
@@ -44,14 +44,5 @@ public class Sizer : MonoBehaviour
         }
         
     }
-
-    //public void sizechange()
-    //{
-    //    int lr = rocks.Length;
-    //    for (int i = 0; i<lr; i++)
-    //    {
-            
-    //    }
-    //}
 
 }

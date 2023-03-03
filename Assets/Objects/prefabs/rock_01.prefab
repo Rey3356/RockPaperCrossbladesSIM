@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6364275087128477010}
   - component: {fileID: 2474599658537979032}
-  - component: {fileID: 252190979809380556}
+  - component: {fileID: -3782340912664762598}
+  - component: {fileID: -2806991246851548420}
   - component: {fileID: -7875115683380835902}
   - component: {fileID: 3997860537463918292}
+  - component: {fileID: 8821311821985408238}
   m_Layer: 0
   m_Name: rock_01
   m_TagString: rock
@@ -87,32 +89,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &252190979809380556
-BoxCollider2D:
+--- !u!54 &-3782340912664762598
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5287448246410718030}
-  m_Enabled: 1
-  m_Density: 1
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 56
+  m_CollisionDetection: 1
+--- !u!65 &-2806991246851548420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5287448246410718030}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.029139549, y: 0.0035291463}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6888889, y: 0.74444443}
-    newSize: {x: 0.6888889, y: 0.74444443}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6017032, y: 0.7051803}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.58966655, y: 0.6756579, z: 0.20000002}
+  m_Center: {x: -0.020473074, y: -0.000645121, z: 0}
 --- !u!82 &-7875115683380835902
 AudioSource:
   m_ObjectHideFlags: 0
@@ -134,7 +139,7 @@ AudioSource:
   Priority: 5
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10378.156
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -221,3 +226,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34152a25b1ca2f245850dcb8d241ed55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8821311821985408238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5287448246410718030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d08d54370a01e4180ff666308dce2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SCOB: {fileID: 11400000, guid: 45b36d6a20f83c84d9f44382a86eb8bf, type: 2}

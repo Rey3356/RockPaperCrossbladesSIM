@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1019956394731253702}
   - component: {fileID: 1019956394731253705}
-  - component: {fileID: 1019956394731253704}
+  - component: {fileID: -4362541762410726234}
+  - component: {fileID: -1788758960136598089}
   - component: {fileID: 6877393985061166839}
   - component: {fileID: 5586534482070870695}
-  - component: {fileID: 7654503062444026771}
+  - component: {fileID: -4040266885512512864}
   m_Layer: 0
   m_Name: paper_01
   m_TagString: paper
@@ -88,32 +89,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1019956394731253704
-BoxCollider2D:
+--- !u!54 &-4362541762410726234
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019956394731253707}
-  m_Enabled: 1
-  m_Density: 1
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 56
+  m_CollisionDetection: 1
+--- !u!65 &-1788758960136598089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019956394731253707}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0021992326, y: 0.0002913028}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.8}
-    newSize: {x: 0.75, y: 0.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.65500104, y: 0.7994175}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.6659078, y: 0.8000001, z: 0.20000002}
+  m_Center: {x: 0.00058965886, y: 0, z: 0}
 --- !u!82 &6877393985061166839
 AudioSource:
   m_ObjectHideFlags: 0
@@ -222,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34152a25b1ca2f245850dcb8d241ed55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7654503062444026771
+--- !u!114 &-4040266885512512864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,8 +235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1019956394731253707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d30da70590078a0499f5cbf5c23802ad, type: 3}
+  m_Script: {fileID: 11500000, guid: f0d08d54370a01e4180ff666308dce2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selfprefab: {fileID: 1019956394731253707}
-  scissorprefab: {fileID: 8230108357201912214, guid: d6d64bba45ee06a44901ca70e60fd6e5, type: 3}
+  SCOB: {fileID: 11400000, guid: 45b36d6a20f83c84d9f44382a86eb8bf, type: 2}

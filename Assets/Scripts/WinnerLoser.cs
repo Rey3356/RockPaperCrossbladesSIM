@@ -4,28 +4,47 @@ using UnityEngine;
 
 public class WinnerLoser : MonoBehaviour
 {
+    [SerializeField] OBJScOb SCOB;
     GameObject other;
-    [SerializeField] GameObject selfprefab;
-    [SerializeField] GameObject scissorprefab;
 
-    private void OnCollisionEnter()
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "rock") // if(collision.otherCollider.tag == "rock")
+        if (gameObject.tag == "rock")
         {
-            //other = collision.gameObject;
-            //Instantiate(selfprefab, other.GetComponent<Transform>().localPosition, Quaternion.identity);
-            //Destroy(collision.gameObject);
-            Debug.Log("rock collison");
+            if (collision.collider.tag == "scissors") // win
+            {
+                other = collision.gameObject;
+                Instantiate(SCOB.Objects[0], other.GetComponent<Transform>().localPosition, Quaternion.identity);
+                Destroy(collision.gameObject);
+                Debug.Log("scissors collison");
+            }
+
         }
 
-        if (other.gameObject.tag == "scissor") //if (collision.otherCollider.tag == "scissors")
+        if (gameObject.tag == "paper")
         {
-            //other = collision.gameObject;
-            //Instantiate(scissorprefab, transform.localPosition, Quaternion.identity);
-            //Destroy(gameObject);
-            Debug.Log("scissor collison");
+            if (collision.collider.tag == "rock") //win
+            {
+                other = collision.gameObject;
+                Instantiate(SCOB.Objects[1], other.GetComponent<Transform>().localPosition, Quaternion.identity);
+                Destroy(collision.gameObject);
+                Debug.Log("rock collison");
+            }
+
         }
 
-        Debug.Log("any collison");
+        if (gameObject.tag == "scissors")
+        {
+            if (collision.collider.tag == "paper") //win
+            {
+                other = collision.gameObject;
+                Instantiate(SCOB.Objects[2], other.GetComponent<Transform>().localPosition, Quaternion.identity);
+                Destroy(collision.gameObject);
+                Debug.Log("paper collison");
+            }
+        }
+
     }
+
 }
+
